@@ -1,6 +1,3 @@
-Here is the complete `README.md` with all sections included:
-
-```markdown
 # ExamSecure: Blockchain-Integrated Smart Attendance with Facial Recognition
 
 **ExamSecure** is a cutting-edge decentralized application (dApp) that integrates **blockchain technology** with **facial recognition** to provide a secure, automated, and efficient attendance management system. Designed to cater to educational institutions, corporates, and large-scale events, ExamSecure ensures transparency, accountability, and scalability.
@@ -63,125 +60,7 @@ The smart contract forms the backbone of ExamSecure, enabling decentralized mana
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract AttendanceSystem {
-    struct Student {
-        string name;
-        string regNo;
-        uint256 lastAttendanceTime;
-        bool isVerified;
-    }
-
-    struct Classroom {
-        string className;
-        mapping(address => Student) students;
-        address[] studentAddresses;
-        uint256 attendanceCount;
-    }
-
-    mapping(uint256 => Classroom) public classrooms;
-    mapping(string => address) public regNoToAddress; // Mapping to store student address by regNo
-    uint256 public classroomCount;
-
-    event ClassroomCreated(uint256 classId, string className);
-    event StudentAdded(uint256 classId, address studentAddress, string name, string regNo);
-    event AttendanceMarked(uint256 classId, address studentAddress, uint256 timestamp);
-
-    // Create Classroom
-    function createClassroom(string memory _className) public {
-        classrooms[classroomCount].className = _className;
-        classroomCount++;
-        emit ClassroomCreated(classroomCount - 1, _className);
-    }
-
-    // Add student to classroom
-    function addStudentToClass(uint256 _classId, string memory _name, string memory _regNo) public {
-        require(_classId < classroomCount, "Classroom does not exist");
-        require(bytes(_name).length > 0 && bytes(_regNo).length > 0, "Invalid student details");
-        
-        Classroom storage classroom = classrooms[_classId];
-
-        // Ensure that the registration number is unique within the classroom
-        for (uint256 i = 0; i < classroom.studentAddresses.length; i++) {
-            if (keccak256(bytes(classroom.students[classroom.studentAddresses[i]].regNo)) == keccak256(bytes(_regNo))) {
-                revert("Student with this registration number already exists in this classroom");
-            }
-        }
-
-        address studentAddress = msg.sender;  // Use msg.sender as the student's unique address
-
-        // Store the student data
-        classroom.students[studentAddress] = Student(_name, _regNo, 0, false);
-        classroom.studentAddresses.push(studentAddress);
-
-        // Map the registration number to the student's address
-        regNoToAddress[_regNo] = studentAddress;
-
-        emit StudentAdded(_classId, studentAddress, _name, _regNo);
-    }
-
-    // Get student address by registration number
-    function getStudentAddressByRegNo(string memory _regNo) public view returns (address) {
-        return regNoToAddress[_regNo];
-    }
-
-    // Mark attendance for student
-    function markAttendance(uint256 _classId, address _student) public {
-        require(_classId < classroomCount, "Classroom does not exist");
-        Classroom storage classroom = classrooms[_classId];
-        Student storage student = classroom.students[_student];
-        
-        require(student.lastAttendanceTime == 0 || block.timestamp - student.lastAttendanceTime >= 1 days, "Attendance already marked within 24 hours");
-        student.lastAttendanceTime = block.timestamp;
-        student.isVerified = true;
-        
-        classroom.attendanceCount++;
-        emit AttendanceMarked(_classId, _student, block.timestamp);
-    }
-
-    // Get attendance count for classroom
-    function getAttendanceCount(uint256 _classId) public view returns (uint256) {
-        require(_classId < classroomCount, "Classroom does not exist");
-        return classrooms[_classId].attendanceCount;
-    }
-
-    // Get last attendance time for student
-    function getLastAttendanceTime(uint256 _classId, address _student) public view returns (uint256) {
-        require(_classId < classroomCount, "Classroom does not exist");
-        return classrooms[_classId].students[_student].lastAttendanceTime;
-    }
-
-    // Get Classroom details
-    function getClassroom(uint256 _classId) public view returns (string memory, address[] memory) {
-        require(_classId < classroomCount, "Classroom does not exist");
-        Classroom storage classroom = classrooms[_classId];
-        return (classroom.className, classroom.studentAddresses);
-    }
-
-    // Get marked attendance students for classroom (including regNo)
-    function getMarkedAttendanceStudents(uint256 _classId) public view returns (address[] memory, string[] memory) {
-        require(_classId < classroomCount, "Classroom does not exist");
-        Classroom storage classroom = classrooms[_classId];
-
-        uint256 count = 0;
-        for (uint256 i = 0; i < classroom.studentAddresses.length; i++) {
-            if (classroom.students[classroom.studentAddresses[i]].isVerified) {
-                count++;
-            }
-        }
-
-        address[] memory markedStudents = new address[](count);
-        string[] memory regNos = new string[](count);
-        uint256 index = 0;
-        for (uint256 i = 0; i < classroom.studentAddresses.length; i++) {
-            if (classroom.students[classroom.studentAddresses[i]].isVerified) {
-                markedStudents[index] = classroom.studentAddresses[i];
-                regNos[index] = classroom.students[classroom.studentAddresses[i]].regNo;
-                index++;
-            }
-        }
-        return (markedStudents, regNos);
-    }
-}
+// Full Solidity code implementation goes here
 ```
 
 ---
@@ -238,31 +117,41 @@ Manual attendance systems are often prone to inefficiencies such as human error,
 ## Usage Instructions
 
 1. Clone the repository:  
-   ```bash
    git clone https://github.com/Angad-2002/ExamSecure.git
-   ```
+
 2. Navigate to the project directory:  
-   ```bash
    cd ExamSecure
-   ```
-3. Install dependencies:  
-   ```bash
-   npm install # For frontend
-   pip install -r requirements.txt # For backend
-   ```
-4. Compile and Deploy the smart contract:  
-   ```bash
+
+3. Deploy the smart contract:  
    truffle compile
    truffle migrate
-   ```
-5. Run the application:  
-   ```bash
-   npm start # Start frontend
-   python main.py # Start backend
-   ```
-6. Connect to MetaMask and add Test Ethers to it.
 
-7. Test the Application. 
+4. Set up the backend environment:
+   - Navigate to the `Facev2` directory:
+     cd Facev2
+   - Create a virtual environment:
+     python3 -m venv venv
+   - Activate the virtual environment:
+     - On macOS/Linux:
+       source venv/bin/activate
+     - On Windows:
+       venv\Scripts\activate
+   - Install the backend dependencies (Look for different internet sources (stackoverflow etc.) if encountering errors):
+     pip install facedb, numpy, cv2 etc.
+
+5. Install frontend dependencies:  
+   cd frontend
+   npm install # For frontend
+
+6. Run the application:  
+   - Start the frontend:
+     npm start # Start frontend
+   - Start the backend:
+     python main.py # Start backend
+
+7. Connect to MetaMask and upload the Test Ethers into it.
+
+8. Test the Web DApp.
 
 ---
 
@@ -288,21 +177,13 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-Developed by Angad Singh.  
 For queries or suggestions, feel free to reach out via [GitHub](https://github.com/Angad-2002).
-
----
 
 ## Contributors
 
-1. **Angad Singh** – Lead Developer, Project Architect, and Contributor  
-   - GitHub: [Angad-2002](https://github.com/Angad-2002)
-   
-2. **[Contributor Name 1]** – Frontend Developer, UI/UX Specialist  
-   - GitHub: [Contributor GitHub Link 1](#)
-   
-3. **[Contributor Name 2]** – Blockchain Developer, Smart Contract Implementation  
-   - GitHub: [Contributor GitHub Link 2](#)
-```
-
-Replace `[Contributor Name 1]` and `[Contributor Name 2]` with the actual contributors' names and their respective GitHub links.
+Angad Singh – 
+GitHub: [Angad-2002](https://github.com/Angad-2002)
+Ashish Benny –
+GitHub: [Angad-2002](https://github.com/Angad-2002)
+Akhand Pratap Singh Chauhan –
+GitHub: [Angad-2002](https://github.com/Angad-2002)
