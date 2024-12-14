@@ -1,3 +1,6 @@
+Here is the complete `README.md` with all sections included:
+
+```markdown
 # ExamSecure: Blockchain-Integrated Smart Attendance with Facial Recognition
 
 **ExamSecure** is a cutting-edge decentralized application (dApp) that integrates **blockchain technology** with **facial recognition** to provide a secure, automated, and efficient attendance management system. Designed to cater to educational institutions, corporates, and large-scale events, ExamSecure ensures transparency, accountability, and scalability.
@@ -17,6 +20,7 @@
 9. [Contributing](#contributing)
 10. [License](#license)
 11. [Contact](#contact)
+12. [Contributors](#contributors)
 
 ---
 
@@ -246,8 +250,9 @@ Manual attendance systems are often prone to inefficiencies such as human error,
    npm install # For frontend
    pip install -r requirements.txt # For backend
    ```
-4. Deploy the smart contract:  
+4. Compile and Deploy the smart contract:  
    ```bash
+   truffle compile
    truffle migrate
    ```
 5. Run the application:  
@@ -255,6 +260,9 @@ Manual attendance systems are often prone to inefficiencies such as human error,
    npm start # Start frontend
    python main.py # Start backend
    ```
+6. Connect to MetaMask and add Test Ethers to it.
+
+7. Test the Application. 
 
 ---
 
@@ -282,3 +290,19 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 Developed by Angad Singh.  
 For queries or suggestions, feel free to reach out via [GitHub](https://github.com/Angad-2002).
+
+---
+
+## Contributors
+
+1. **Angad Singh** – Lead Developer, Project Architect, and Contributor  
+   - GitHub: [Angad-2002](https://github.com/Angad-2002)
+   
+2. **[Contributor Name 1]** – Frontend Developer, UI/UX Specialist  
+   - GitHub: [Contributor GitHub Link 1](#)
+   
+3. **[Contributor Name 2]** – Blockchain Developer, Smart Contract Implementation  
+   - GitHub: [Contributor GitHub Link 2](#)
+```
+
+Replace `[Contributor Name 1]` and `[Contributor Name 2]` with the actual contributors' names and their respective GitHub links.
