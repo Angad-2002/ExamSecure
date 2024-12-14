@@ -7,9 +7,9 @@
 ## Table of Contents
 
 1. [Key Features](#key-features)
-2. [Solidity Smart Contract](#solidity-smart-contract-simpleattendancesol)
-3. [Practical Need for ExamSecure](#practical-need-for-examsecure)
-4. [Technologies Used](#technologies-used)
+2. [Practical Need for ExamSecure](#practical-need-for-examsecure)
+3. [Technologies Used](#technologies-used)
+4. [Solidity Smart Contract](#solidity-smart-contract-simpleattendancesol)
 5. [API Documentation](#api-documentation)
 6. [Workflow](#workflow)
 7. [Usage Instructions](#usage-instructions)
@@ -42,6 +42,27 @@
 5. **Administrative Tools**  
    - Dashboards for monitoring attendance patterns.  
    - Remote accessibility for hybrid working or learning models.
+
+---
+
+## Practical Need for ExamSecure
+
+Manual attendance systems are often prone to inefficiencies such as human error, proxy attendance, and high administrative effort. **ExamSecure** addresses these challenges with:
+
+- **Accuracy and Reliability**: Eliminates manual errors through automated processes.  
+- **Enhanced Security**: Blockchain's tamper-proof system ensures data integrity.  
+- **Real-Time Processing**: Facilitates quick attendance marking using facial recognition.  
+- **Scalability**: Adapts to varied environments, from small classrooms to large events.  
+- **Seamless Integration**: Works with existing systems for grading or payroll processing.
+
+---
+
+## Technologies Used
+
+- **HTML5, CSS, JavaScript, ReactJS**: Frontend development for seamless user experience.  
+- **Flask, Node.js**: Backend development for API communication and system logic.  
+- **FaceDB, OpenCV**: Facial recognition and image processing.  
+- **Solidity, Ganache, Truffle, MetaMask**: Blockchain and smart contract development.
 
 ---
 
@@ -180,27 +201,6 @@ contract AttendanceSystem {
     }
 }
 ```
-
----
-
-## Practical Need for ExamSecure
-
-Manual attendance systems are often prone to inefficiencies such as human error, proxy attendance, and high administrative effort. **ExamSecure** addresses these challenges with:
-
-- **Accuracy and Reliability**: Eliminates manual errors through automated processes.  
-- **Enhanced Security**: Blockchain's tamper-proof system ensures data integrity.  
-- **Real-Time Processing**: Facilitates quick attendance marking using facial recognition.  
-- **Scalability**: Adapts to varied environments, from small classrooms to large events.  
-- **Seamless Integration**: Works with existing systems for grading or payroll processing.
-
----
-
-## Technologies Used
-
-- **HTML5, CSS, JavaScript, ReactJS**: Frontend development for seamless user experience.  
-- **Flask, Node.js**: Backend development for API communication and system logic.  
-- **FaceDB, OpenCV**: Facial recognition and image processing.  
-- **Solidity, Ganache, Truffle, MetaMask**: Blockchain and smart contract development.
 
 ---
 
