@@ -234,42 +234,65 @@ Manual attendance systems are often prone to inefficiencies such as human error,
 
 ## Usage Instructions
 
-1. Clone the repository:  
+1. **Clone the repository**:  
+   Run the following command in your terminal:  
+   ```bash
    git clone https://github.com/Angad-2002/ExamSecure.git
+   ```
 
-2. Navigate to the project directory:  
+2. **Navigate to the project directory**:  
+   ```bash
    cd ExamSecure
+   ```
 
-3. Deploy the smart contract:  
+3. **Deploy the smart contract**:  
+   ```bash
    truffle compile
    truffle migrate
+   ```
 
-4. Set up the backend environment:
-   - Navigate to the `Facev2` directory:
+4. **Set up the backend environment**:  
+   - Navigate to the `Facev2` directory:  
+     ```bash
      cd Facev2
-   - Create a virtual environment:
+     ```
+   - Create a virtual environment:  
+     ```bash
      python3 -m venv venv
-   - Activate the virtual environment:
-     - On macOS/Linux:
+     ```
+   - Activate the virtual environment:  
+     - On macOS/Linux:  
+       ```bash
        source venv/bin/activate
-     - On Windows:
+       ```
+     - On Windows:  
+       ```bash
        venv\Scripts\activate
-   - Install the backend dependencies (Look for different internet sources (stackoverflow etc.) if encountering errors):
-     pip install facedb, numpy, cv2 etc.
+       ```
+   - Install the backend dependencies (e.g., `facedb`, `numpy`, `opencv`):  
+     ```bash
+     pip install facedb numpy opencv-python
+     ```
 
-5. Install frontend dependencies:  
+5. **Install frontend dependencies**:  
+   ```bash
    cd frontend
-   npm install # For frontend
+   npm install
+   ```
 
-6. Run the application:  
-   - Start the frontend:
-     npm start # Start frontend
-   - Start the backend:
-     python main.py # Start backend
+6. **Run the application**:  
+   - Start the frontend:  
+     ```bash
+     npm start
+     ```
+   - Start the backend:  
+     ```bash
+     python main.py
+     ```
 
-7. Connect to MetaMask and upload the Test Ethers into it.
+7. **Connect to MetaMask** and upload the test ethers to your wallet.
 
-8. Test the Web DApp.
+8. **Test the Web DApp**.
 
 ---
 
