@@ -7,7 +7,7 @@
 ## Table of Contents
 
 1. [Key Features](#key-features)
-2. [Solidity Smart Contract: `SimpleAttendance.sol`](#solidity-smart-contract-simpleattendancesol)
+2. [Solidity Smart Contract](#solidity-smart-contract-simpleattendancesol)
 3. [Practical Need for ExamSecure](#practical-need-for-examsecure)
 4. [Technologies Used](#technologies-used)
 5. [API Documentation](#api-documentation)
