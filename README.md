@@ -320,11 +320,17 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 For queries or suggestions, feel free to reach out via [GitHub](https://github.com/Angad-2002).
 
+---
+
 ## Contributors
 
-Angad Singh – 
-GitHub: [Angad-2002](https://github.com/Angad-2002)
-Ashish Benny –
-GitHub: [Angad-2002](https://github.com/Angad-2002)
-Akhand Pratap Singh Chauhan –
-GitHub: [Angad-2002](https://github.com/Angad-2002)
+- **Angad Singh**  
+  GitHub: [Angad-2002](https://github.com/Angad-2002)
+
+- **Ashish Benny**  
+  GitHub: [Ashish-Benny](https://github.com/Ashish-Benny)
+
+- **Akhand Pratap Singh Chauhan**  
+  GitHub: [Akhand-Pratap-Singh](https://github.com/Akhand-Pratap-Singh)
+
+---
