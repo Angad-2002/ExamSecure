@@ -302,12 +302,15 @@ contract AttendanceSystem {
 ### Screenshots
 
 - **Home Page**:
+
 ![image](https://github.com/user-attachments/assets/f9996863-3bc9-466e-8f52-f2d0b70e1d6a)
 
 - **Admin Dashboard**: Manage classrooms and students with ease.
+
 ![image](https://github.com/user-attachments/assets/3097fe2f-9e8e-4b2b-8770-f75c6cb77688)
 
 - **Faculty Dashboard**: Live video streaming interface for attendance tracking.
+
 ![image](https://github.com/user-attachments/assets/84a80513-bcf7-40f5-8617-333e80211d0d)
 
 ### Demo Video
