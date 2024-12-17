@@ -328,9 +328,9 @@ For queries or suggestions, feel free to reach out via [GitHub](https://github.c
   GitHub: [Angad-2002](https://github.com/Angad-2002)
 
 - **Ashish Benny**  
-  GitHub: [Ashish-Benny](https://github.com/Ashish-Benny)
+  GitHub: [Ashish-Benny](https://github.com/AshishBenny)
 
 - **Akhand Pratap Singh Chauhan**  
-  GitHub: [Akhand-Pratap-Singh](https://github.com/Akhand-Pratap-Singh)
+  GitHub: [Akhand-Pratap-Singh](https://github.com/akhandchauhan)
 
 ---
