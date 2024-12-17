@@ -13,11 +13,12 @@
 5. [API Documentation](#api-documentation)
 6. [Workflow](#workflow)
 7. [Usage Instructions](#usage-instructions)
-8. [Future Enhancements](#future-enhancements)
-9. [Contributing](#contributing)
-10. [License](#license)
-11. [Contact](#contact)
-12. [Contributors](#contributors)
+8. [Screenshots and Demo Video](#screenshots-and-demo-video)
+9. [Future Enhancements](#future-enhancements)
+10. [Contributing](#contributing)
+11. [License](#license)
+12. [Contact](#contact)
+13. [Contributors](#contributors)
 
 ---
 
@@ -293,6 +294,24 @@ contract AttendanceSystem {
 7. **Connect to MetaMask** and upload the test ethers to your wallet.
 
 8. **Test the Web DApp**.
+
+---
+
+## Screenshots and Demo Video
+
+### Screenshots
+
+- **Home Page**:
+![image](https://github.com/user-attachments/assets/f9996863-3bc9-466e-8f52-f2d0b70e1d6a)
+
+- **Admin Dashboard**: Manage classrooms and students with ease.
+![image](https://github.com/user-attachments/assets/3097fe2f-9e8e-4b2b-8770-f75c6cb77688)
+
+- **Faculty Dashboard**: Live video streaming interface for attendance tracking.
+![image](https://github.com/user-attachments/assets/84a80513-bcf7-40f5-8617-333e80211d0d)
+
+### Demo Video
+A detailed video walkthrough of the system's features and usage can be found [here](#).
 
 ---
 
